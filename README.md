@@ -29,12 +29,13 @@ https://adammendes-1306.github.io/personafolio/
 
 ```
 personafolio/
-├── admin/
-├── components/
-├── css/
-├── images/
-├── js/
-├── pages/
+├── admin/         # Admin dashboard
+├── assets/        # Images and other assets
+├── components/    # Reusable navbar and footer
+├── css/           # Stylesheets
+├── js/            # JavaScript files
+├── pages/         # Portfolio pages
+├── README.md
 └── index.html
 ```
 
