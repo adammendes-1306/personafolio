@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Alex</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <style>
+    .contact-wrapper {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .contact-intro {
+      color: var(--muted);
+      margin-bottom: 48px;
+      max-width: 600px;
+    }
+
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .contact-item {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition: 0.2s ease;
+    }
+
+    .contact-item:hover {
+      transform: translateY(-2px);
+    }
+
+    .contact-label {
+      display: block;
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .contact-value,
+    .contact-value a {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--fg);
+      text-decoration: none;
+
+      word-break: break-word;
+    }
+
+    .contact-value a:hover {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+  <script src="../js/components.js"></script>
+
+  <main class="page-wrapper">
+    <div class="contact-wrapper">
+
+      <span class="section-label">Contact</span>
+      <h1 class="section-title">Let's get in touch</h1>
+
+      <p class="contact-intro">
+        I'm currently open to internship opportunities, collaborations,
+        and interesting projects. Feel free to reach out through any of
+        the channels below.
+      </p>
+
+      <div class="contact-list">
+
+        <div class="contact-item">
+          <span class="contact-label">Email</span>
+          <div class="contact-value">
+            <a id="email" href="#"></a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <span class="contact-label">Phone</span>
+          <div class="contact-value" id="phone">
+          </div>
+        </div>
+
+        <div class="contact-item" id="linkedinItem">
+          <span class="contact-label">LinkedIn</span>
+          <div class="contact-value">
+            <a id="linkedin" href="#" target="_blank"></a>
+          </div>
+        </div>
+
+        <div class="contact-item" id="resumeItem">
+          <span class="contact-label">Resume</span>
+          <div class="contact-value">
+            <a id="resume" href="#" target="_blank">
+              View Resume
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="../js/components.js"></script>
+
+  <script type="module" src="../js/main.js"></script>
+  <script type="module" src="../js/display-contact.js"></script>
+
+</body>
+</html>

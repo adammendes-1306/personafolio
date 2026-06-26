@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Experience | PersonaFolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+<body>
+
+    <main class="page-container">
+
+        <div class="top-bar">
+
+            <a href="index.html" class="back-link">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Dashboard
+
+            </a>
+
+            <button
+                id="logoutBtn"
+                class="logout-btn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </button>
+
+        </div>
+
+        <section class="page-header">
+
+            <h1 class="page-title">
+                Experience
+            </h1>
+
+            <p class="page-subtitle">
+                Manage your work experience.
+            </p>
+
+        </section>
+
+        <section class="content-card">
+
+            <form id="experienceForm">
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="startDate">
+                            Start Date
+                        </label>
+
+                        <input
+                            type="month"
+                            id="startDate"
+                            required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="endDate">
+                            End Date
+                        </label>
+
+                        <input
+                            type="month"
+                            id="endDate">
+
+                    </div>
+
+                </div>
+
+                <div class="checkbox-group">
+
+                    <input
+                        type="checkbox"
+                        id="current">
+
+                    <label for="current">
+                        Currently Working Here
+                    </label>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="role">
+
+                        Role
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="role"
+                        required>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="company">
+                            Company
+                        </label>
+
+                        <input
+                            type="text"
+                            id="company"
+                            required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="location">
+                            Location
+                        </label>
+
+                        <input
+                            type="text"
+                            id="location"
+                            placeholder="Kuala Lumpur, Malaysia"
+                            required>
+
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="description">
+
+                        Description
+
+                    </label>
+
+                    <textarea
+                        id="description"
+                        required></textarea>
+
+                </div>
+
+                <div class="form-actions">
+
+                    <button
+                        type="submit"
+                        class="btn-save">
+
+                        <i class="fa-solid fa-floppy-disk"></i>
+
+                        Save Experience
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+        <section class="content-card">
+
+            <h2 style="margin-bottom:24px;">
+                Existing Experience
+            </h2>
+
+            <div id="experienceList"></div>
+
+        </section>
+
+    </main>
+
+    <!-- Logout Modal -->
+
+    <div id="logoutModal" class="modal hidden">
+
+        <div class="modal-content">
+
+            <h2>Sign Out</h2>
+
+            <p>
+
+                Are you sure you want to sign out?
+
+            </p>
+
+            <div class="modal-actions">
+
+                <button id="cancelLogout">
+
+                    Cancel
+
+                </button>
+
+                <button id="confirmLogout">
+
+                    Logout
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div
+        id="toast"
+        class="toast hidden">
+
+        Experience saved successfully.
+
+    </div>
+
+    <script type="module" src="js/experience.js"></script>
+
+</body>
+
+</html>

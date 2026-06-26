@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience — Alex</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .exp-list { display: flex; flex-direction: column; }
+
+    .exp-item {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 32px;
+      padding: 32px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .exp-item:last-child { border-bottom: 1px solid var(--border); }
+
+    .exp-date {
+      font-size: 13px;
+      color: var(--muted);
+      padding-top: 4px;
+    }
+
+    .exp-role {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .exp-company {
+      font-size: 14px;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .exp-desc {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .exp-bullets {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+      padding-left: 16px;
+      margin-top: 8px;
+    }
+
+    .exp-bullets li { margin-bottom: 4px; }
+
+    @media (max-width: 640px) {
+      .exp-item { grid-template-columns: 1fr; gap: 4px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+  <script src="../js/components.js"></script>
+
+  <main class="page-wrapper">
+    <span class="section-label">Experience</span>
+    <h1 class="section-title">Where I've worked</h1>
+    <p class="section-desc">My professional timeline so far.</p>
+
+    <div id="experienceContainer" class="exp-list">
+
+      <!-- Fetched from Firestore -->
+
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="../js/components.js"></script>
+
+  <script type="module" src="../js/main.js"></script>
+  <script type="module" src="../js/display-experience.js"></script>
+</body>
+</html>

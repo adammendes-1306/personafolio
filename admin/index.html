@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio Dashboard | PersonaFolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+<body>
+
+    <div class="background-blur blur-1"></div>
+    <div class="background-blur blur-2"></div>
+
+    <main class="page-container">
+
+        <!-- Top Bar -->
+
+        <div class="top-bar">
+
+            <div>
+
+                <h1 class="logo">
+                    PersonaFolio<span>.</span>
+                </h1>
+
+            </div>
+
+            <button
+                id="logoutBtn"
+                class="logout-btn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </button>
+
+        </div>
+
+        <!-- Page Heading -->
+
+        <section>
+
+            <h2 class="page-title">
+                Portfolio Dashboard
+            </h2>
+
+            <p class="page-subtitle">
+                Manage your portfolio content from one place.
+            </p>
+
+        </section>
+
+        <!-- Management Cards -->
+
+        <section class="management-grid">
+
+            <!-- Skills -->
+
+            <a href="manage-skills.html" class="manage-card" id="skillsCard">
+
+                <i class="fa-solid fa-code"></i>
+
+                <h3>Skills</h3>
+
+                <p>
+                    Manage technical skills and soft skills.
+                </p>
+
+            </a>
+
+            <!-- Projects -->
+
+            <a href="manage-projects.html" class="manage-card" id="projectsCard">
+
+                <i class="fa-solid fa-folder-open"></i>
+
+                <h3>Projects</h3>
+
+                <p>
+                    Add, edit or remove portfolio projects and GitHub links.
+                </p>
+
+            </a>
+
+            <!-- Experience -->
+
+            <a href="manage-experience.html" class="manage-card" id="experienceCard">
+
+                <i class="fa-solid fa-briefcase"></i>
+
+                <h3>Experience</h3>
+
+                <p>
+                    Update internships, work experience and professional history.
+                </p>
+
+            </a>
+
+            <!-- Contact -->
+
+            <a href="manage-contact.html" class="manage-card" id="contactCard">
+
+                <i class="fa-solid fa-address-card"></i>
+
+                <h3>Contact</h3>
+
+                <p>
+                    Update email, phone number, LinkedIn profile and resume.
+                </p>
+
+            </a>
+
+        </section>
+
+    </main>
+
+    <script type="module" src="js/dashboard.js"></script>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-spinner"></div>
+        <p>Checking authentication...</p>
+    </div>
+
+    <!-- Logout Modal -->
+    <div id="logoutModal" class="modal hidden">
+
+        <div class="modal-content">
+
+            <h2>Sign Out</h2>
+
+            <p>
+                Are you sure you want to sign out?
+            </p>
+
+            <div class="modal-actions">
+
+                <button id="cancelLogout">
+                    Cancel
+                </button>
+
+                <button id="confirmLogout">
+                    Logout
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Alex</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .about-avatar {
+      width: 100%;
+      aspect-ratio: 1;
+      background: var(--border);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 64px;
+      font-weight: 700;
+      color: var(--accent);
+      max-width: 320px;
+    }
+
+    .about-text p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .stats {
+      display: flex;
+      gap: 32px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+    }
+
+    .stat-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--fg);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    @media (max-width: 640px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .about-avatar { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+  <script src="../js/components.js"></script>
+
+  <main class="page-wrapper">
+    <div class="about-grid">
+
+      <!-- AVATAR — swap for <img> when you have a photo -->
+      <div class="about-avatar">
+        <img src="../assets/me.JPG" alt="Adam Rais" 
+              class="about-avatar" style="object-fit:cover;">
+      </div>
+
+      <div class="about-text">
+        <span class="section-label">About Me</span>
+        <h1 class="section-title">Meet Your Next Intern Boi!</h1>
+
+        <p>
+          My aim is to become a software developer who enjoys 
+          building practical and user-friendly applications. 
+          I have a strong interest in software, web, and mobile 
+          development, and I love learning new technologies 
+          to improve my skills.
+        </p>
+        <p>
+          While software development is my main focus, I'm also 
+          open to IT-related roles where I can gain experience, 
+          contribute to meaningful projects, and continue growing 
+          as an IT professional.
+        </p>
+        <p>
+          <!-- Add more personal details, hobbies, or background here -->
+        </p>
+
+        <div class="stats">
+          <div>
+            <div class="stat-num">3.93</div>
+            <div class="stat-label">CGPA</div>
+          </div>
+          <div>
+            <div class="stat-num">5+</div>
+            <div class="stat-label">Projects completed</div>
+          </div>
+          <div>
+            <div class="stat-num">Keep</div>
+            <div class="stat-label">Learning</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="../js/components.js"></script>
+
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>
