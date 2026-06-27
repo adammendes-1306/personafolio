@@ -40,7 +40,7 @@ async function loadProjects() {
 
             const project = docSnap.data();
 
-            const image = project.image || "../assets/project-placeholder.jpg";
+            const image = project.image || "../assets/project-placeholder.png";
 
             const card = document.createElement("div");
 
