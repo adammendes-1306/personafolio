@@ -30,6 +30,12 @@ const nameInput = document.getElementById("name");
 const descriptionInput = document.getElementById("description");
 const tagsInput = document.getElementById("tags");
 
+// Display at view-project
+const durationInput = document.getElementById("duration");
+const statusInput = document.getElementById("status");
+const featuresInput = document.getElementById("features");
+const galleryInput = document.getElementById("gallery");
+
 const linksContainer = document.getElementById("linksContainer");
 const addLinkBtn = document.getElementById("addLinkBtn");
 
@@ -236,6 +242,16 @@ function getTags() {
 
 }
 
+// Convert / Trim
+function getTextareaArray(textarea) {
+
+    return textarea.value
+        .split("\n")
+        .map(item => item.trim())
+        .filter(item => item !== "");
+
+}
+
 // ======================================
 // Save Project
 // ======================================
@@ -247,18 +263,35 @@ form.addEventListener("submit", async (e) => {
     const project = {
 
         image: imageInput.value.trim(),
-
         type: typeInput.value.trim(),
-
         name: nameInput.value.trim(),
-
         description: descriptionInput.value.trim(),
-
         tags: getTags(),
-
         links: getLinks()
 
     };
+
+    // Optional Fields
+
+    if (durationInput.value.trim()) {
+        project.duration = durationInput.value.trim();
+    }
+
+    if (statusInput.value.trim()) {
+        project.status = statusInput.value.trim();
+    }
+
+    const features = getTextareaArray(featuresInput);
+
+    if (features.length) {
+        project.features = features;
+    }
+
+    const gallery = getTextareaArray(galleryInput);
+
+    if (gallery.length) {
+        project.gallery = gallery;
+    }
 
     try {
 
@@ -333,6 +366,14 @@ function attachEvents() {
             descriptionInput.value = project.description || "";
 
             tagsInput.value = (project.tags || []).join(", ");
+            
+            durationInput.value = project.duration || "";
+
+            statusInput.value = project.status || "";
+
+            featuresInput.value = (project.features || []).join("\n");
+
+            galleryInput.value = (project.gallery || []).join("\n");
 
             renderLinks(project.links || []);
 
@@ -404,6 +445,14 @@ function resetForm() {
     editingId = null;
 
     form.reset();
+
+    durationInput.value = "";
+
+    statusInput.value = "";
+
+    featuresInput.value = "";
+
+    galleryInput.value = "";
 
     linksContainer.innerHTML = "";
 

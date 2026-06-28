@@ -45,6 +45,16 @@ async function loadProjects() {
             const card = document.createElement("div");
 
             card.className = "project-card";
+            
+            card.style.cursor = "pointer";
+
+            // Make each card clickable
+            card.onclick = () => {
+
+                window.location.href =
+                    `view-project.html?id=${docSnap.id}`;
+
+            };
 
             card.innerHTML = `
 
