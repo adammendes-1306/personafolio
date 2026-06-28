@@ -149,17 +149,6 @@ function renderProjectInfo(project) {
 
     const rows = [];
 
-    if (project.role) {
-
-        rows.push(`
-            <div class="info-item">
-                <span class="info-label">Role</span>
-                <span class="info-value">${project.role}</span>
-            </div>
-        `);
-
-    }
-
     if (project.duration) {
 
         rows.push(`
